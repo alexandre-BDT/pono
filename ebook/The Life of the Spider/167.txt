@@ -1,0 +1,84 @@
+It remains to be seen up to what point
+the explanation is acceptable. The Spider, for her part, will have none
+of it. Unrelated to the appendix-lacking, corkscrew-twirling Worm, she
+is nevertheless familiar with the logarithmic spiral. From the
+celebrated curve she obtains merely a sort of framework; but, elementary
+though this framework be, it clearly marks the ideal edifice. The Epeira
+works on the same principles as the Mollusc of the convoluted shell. The Mollusc has years wherein to construct its spiral and it uses the
+utmost finish in the whirling process. The Epeira, to spread her net,
+has but an hour's sitting at the most, wherefore the speed at which she
+works compels her to rest content with a simpler production. She
+shortens the task by confining herself to a skeleton of the curve which
+the other describes to perfection. The Epeira, therefore, is versed in the geometric secrets of the
+Ammonite and the Nautilus pompilus; she uses, in a simpler
+form, the logarithmic line dear to the Snail. What guides her? There is
+no appeal here to a wriggle of some kind, as in the case of the Worm
+that ambitiously aspires to become a Mollusc. The animal must needs
+carry within itself a virtual diagram of its spiral. Accident, however
+fruitful in surprises we may presume it to be, can never have taught it
+the higher geometry wherein our own intelligence at once goes astray,
+without a strict preliminary training. Are we to recognize a mere effect of organic structure in the
+Epeira's art? We readily think of the legs, which, endowed with a very
+varying power of extension, might serve as compasses. More or less bent,
+more or less outstretched, they would mechanically determine the angle
+whereat the spiral shall intersect the radius; they would maintain the
+parallel of the chords in each sector. Certain objections arise to affirm that, in this instance, the tool
+is not the sole regulator of the work. Were the arrangement of the
+thread determined by the length of the legs, we should find the spiral
+volutes separated more widely from one another in proportion to the
+greater length of implement in the spinstress. We see this in the Banded
+Epeira and the Silky Epeira. The first has longer limbs and spaces her
+cross-threads more liberally than does the second, whose legs are
+shorter. But we must not rely too much on this rule, say others. The Angular
+Epeira, the Paletinted Epeira and the Cross Spider, all three more or
+less short-limbed, rival the Banded Epeira in the spacing of their
+lime-snares. The last two even dispose them with greater intervening
+distances. We recognize in another respect that the organization of the animal
+does not imply an immutable type of work. Before beginning the sticky
+spiral, the Epeirae first spin an auxiliary intended to strengthen the
+stays. This spiral, formed of plain, non-glutinous thread, starts from
+the centre and winds in rapidly-widening circles to the circumference. It is merely a temporary construction, whereof naught but the central
+part survives when the Spider has set its limy meshes. The second
+spiral, the essential part of the snare, proceeds, on the contrary, in
+serried coils from the circumference to the centre and is composed
+entirely of viscous cross-threads. Here we have, following one after the other merely by a sudden
+alteration of the machine, two volutes of an entirely different order as
+regards direction, the number of whorls and intersection. Both of them
+are logarithmic spirals. I see no mechanism of the legs, be they long or
+short, that can account for this alteration. Can it then be a premeditated design on the part of the Epeira? Can
+there be calculation, measurement of angles, gauging of the parallel by
+means of the eye or otherwise? I am inclined to think that there is none
+of all this, or at least nothing but an innate propensity, whose effects
+the animal is no more able to control than the flower is able to control
+the arrangement of its verticils. The Epeira practises higher geometry
+without knowing or caring. The thing works of itself and takes its
+impetus from an instinct imposed upon creation from the start. The stone thrown by the hand returns to earth describing a certain
+curve; the dead leaf torn and wafted away by a breath of wind makes its
+journey from the tree to the ground with a similar curve. On neither the
+one side nor the other is there any action by the moving body to
+regulate the fall; nevertheless, the descent takes place according to a
+scientific trajectory, the parabola,' of which the section of a cone by
+a plane furnished the prototype to the geometer's speculations. A
+figure, which was at first but a tentative glimpse, becomes a reality by
+the fall of a pebble out of the vertical. The same speculations take up the parabola once more, imagine it
+rolling on an indefinite straight line and ask what course does the
+focus of this curve follow. The answer comes: The focus of the parabola
+describes a catenary,' a line very simple in shape, but endowed with an
+algebraic symbol that has to resort to a kind of cabalistic number at
+variance with any sort of numeration, so much so that the unit refuses
+to express it, however much we subdivide the unit. It is called the
+number e. Its value is represented by the following series
+carried out ad infinitum:
+
+e = 1 + 1/1 + 1/(1*2) + 1/(1*2*3) + 1/(1*2*3*4) + 1/(1*2*3*4*5) +
+etc
+
+If the reader had the patience to work out the few initial terms of
+this series, which has no limit, because the series of natural numerals
+itself has none, he would find:
+
+e=2.7182818... With this weird number are we now stationed within the strictly
+defined realm of the imagination? Not at all: the catenary appears
+actually every time that weight and flexibility act in concert. The name
+is given to the curve formed by a chain suspended by two of its points
+which are not placed on a vertical line.
