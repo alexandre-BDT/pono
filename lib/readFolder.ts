@@ -6,7 +6,7 @@ import path from "node:path"
 
 const README_REGEX = /URL: (?<url>.+)\nTitle: (?<title>.+)\nAuthor: (?<author>.+)\nRelease: (?<release>.+)/
 
-function bookInfo(text: string): Omit<Book, "_id"> {
+function bookInfo(text: string): Book {
   const match = text.match(README_REGEX)
 
   if (!match || !match.groups)
@@ -31,7 +31,7 @@ async function readPage(path: string): Promise<string> {
 async function bookFolder(
   folder: Dirent,
   addPage: (page: Page) => Promise<void>,
-  addBook: (book: Omit<Book, "_id">) => Promise<InsertOneResult<Book>>
+  addBook: (book: Book) => Promise<InsertOneResult<Book>>
 ) {
   try {
     const bookDir = path.join(folder.path, folder.name)
@@ -64,7 +64,7 @@ async function bookFolder(
 export async function readFolder(
   path: string,
   addPage: (page: Page) => Promise<void>,
-  addBook: (book: Omit<Book, "_id">) => Promise<InsertOneResult<Book>>
+  addBook: (book: Book) => Promise<InsertOneResult<Book>>
 ) {
   try {
     const folders = await fs.readdir(path, { withFileTypes: true })

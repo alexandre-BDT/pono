@@ -1,5 +1,5 @@
 import { Collection, Db, InsertOneResult, ObjectId, Sort } from 'mongodb'
-import { Book, Compilation, CompilationAggregation, CustomListingBook, ListingBook, Page, Params } from './types'
+import { Book, Compilation, CompilationAggregation, CustomListingBook, DbDocument, ListingBook, Page, Params } from './types'
 import { readFolder } from './readFolder';
 import formatSort from './utils/formatSort';
 import pricingApi from './utils/pricingAPI';
@@ -19,7 +19,7 @@ class Library {
     this.compilationCollection = database.collection<Compilation>("compilations")
   }
 
-  private async addBook(book: Omit<Book, "_id">): Promise<InsertOneResult<Book>> {
+  private async addBook(book: Book): Promise<InsertOneResult<Book>> {
     try {
       const newBook = this.booksCollection.insertOne({ ...book, _id: new ObjectId() })
       return newBook
@@ -36,8 +36,18 @@ class Library {
     }
   }
 
-  async add(book: Book, pages: Page[]): Promise<void> {
+  async get(bookId: string): Promise<Book | null> {
     try {
+      const book = await this.booksCollection.findOne({ _id: new ObjectId(bookId) })
+      return book
+    } catch (err) {
+      throw err
+    }
+  }
+
+  async add(book: Book, pages: Omit<Page, "bookId">[]): Promise<InsertOneResult<Book>> {
+    try {
+      if (!book || !pages) throw new Error("Missing argument")
       checkMissingProps(book, ["author", "title", "releaseDate"])
       const newBook = await this.booksCollection.insertOne({
         author: book.author,
@@ -45,8 +55,9 @@ class Library {
         releaseDate: book.releaseDate,
         _id: new ObjectId()
       })
-      const linkedPages = pages.map((elem) => ({ ...elem, bookId: newBook.insertedId }))
+      const linkedPages = pages.map((elem) => ({ content: elem.content, pageNumber: elem.pageNumber, bookId: newBook.insertedId }))
       this.pagesCollection.insertMany(linkedPages)
+      return newBook
     } catch (err) {
       throw err
     }
@@ -63,8 +74,6 @@ class Library {
 
   async list(page: number, params?: Params): Promise<{ books: ListingBook[], total: number }> {
     try {
-      if (!page) throw new Error("Missing page")
-
       const { filter, search } = params || {}
       var searchParam: any = {}
       var sortFilter = {} as Sort
@@ -86,7 +95,7 @@ class Library {
         .sort(sortFilter)
         .skip(page * 5)
         .limit(5)
-        .toArray() as Book[]
+        .toArray() as ListingBook[]
       return { books, total }
     } catch (err) {
       throw err
@@ -176,7 +185,6 @@ class Library {
         throw new Error("Book not found")
 
       const res = await this.booksCollection.updateOne({ _id: bookId }, { $set: update })
-      console.log(res, update)
     } catch (err) {
       throw err
     }
@@ -241,7 +249,7 @@ class Library {
       const cost = calculCost(data[0].books.length, total).toFixed(2)
       return { ...data[0], cost }
     } catch (err) {
-      console.log(err)
+      throw err
     }
   }
 }

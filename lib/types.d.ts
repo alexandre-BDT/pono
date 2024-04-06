@@ -10,11 +10,15 @@ export interface Book {
   title: string,
   author: string,
   releaseDate: Date,
+}
+
+export interface DbDocument {
   _id: ObjectId
 }
 
-export type ListingBook = Omit<Book, "author">
-export interface CustomListingBook extends Book {
+export type ListingBook = Omit<Book, "author"> & DbDocument
+
+export interface CustomListingBook extends Book, DbDocument {
   price: string
   pages: Page[]
 }
@@ -28,14 +32,14 @@ export interface UpdateBook {
 type sortDirection = "asc" | "desc"
 
 export interface Filter {
-  date?: sortDirection,
-  title?: sortDirection,
-  author?: sortDirection,
+  date?: sortDirection
+  title?: sortDirection
+  author?: sortDirection
 }
 
 export interface Search {
-  dateRange?: { start: Date, end: Date },
-  title?: string,
+  dateRange?: { start: Date, end: Date }
+  title?: string
   author?: string
 }
 
@@ -45,13 +49,13 @@ export interface Params {
 }
 
 export interface Compilation {
-  bookListId: ObjectId[],
+  bookListId: ObjectId[]
   title: string
 }
 
 export interface CompilationAggregation {
-  _id: ObjectId;
-  pages: Page[];
-  title: string;
-  books: ObjectId[]; // Assuming books is an array of ObjectId
+  _id: ObjectId
+  pages: Page[]
+  title: string
+  books: ObjectId[]
 }
